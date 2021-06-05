@@ -22,6 +22,10 @@
         padding: 10px 25px 10px 25px;
         margin: 40px 20px 40px 20px;
     }
+
+    .banner-text-div #btns{
+        left: 110px;
+    }
 }
 
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
@@ -66,7 +70,7 @@
     }
 }
 
-/* iPads (portrait and landscape) ----------- */
+/* iPads (portrait and landscape) ---------- */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     nav a {

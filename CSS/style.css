@@ -223,7 +223,7 @@ li>a:only-child:after {
 .Hero_Banner_Section {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 580px;
+    grid-template-rows: 650px;
     grid-column-gap: 0px;
     align-content: center;
     justify-content: center;
@@ -266,7 +266,7 @@ li>a:only-child:after {
     max-width: fit-content;
     background-color: #fff;
     margin: 100px 50px 100px 50px;
-    padding: 30px 50px 30px 50px;
+    padding: 30px 50px 30px 50px !important;
     z-index: 2;
     opacity: .95;
 }
@@ -284,6 +284,26 @@ li>a:only-child:after {
     letter-spacing: 0.03em;
     line-height: 1.6195;
     padding: 20px 0px 20px 0px;
+}
+
+.banner-text-div #circle::before {
+    position: relative;
+    content: "→";
+    top: 0;
+    border-radius: 50px;
+    border: 2px solid #de3d3b;
+    left: 0;
+    padding: 15px 15px 15px 15px;
+}
+
+.banner-text-div #btns {
+    position: absolute;
+    background-color: white;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid white;
+    left: 145px;
+    font-size: var(--Subpara-Font);
+    color: #000;
 }
 
 /* Hero Banner Ends Here */
