@@ -268,7 +268,7 @@ li>a:only-child:after {
     align-items: center;
     max-width: fit-content;
     background-color: #fff;
-    margin: 100px 50px 100px 50px;
+    margin: 75px 50px 75px 50px !important;
     padding: 30px 50px 30px 50px !important;
     z-index: 2;
     opacity: .95;
@@ -311,7 +311,7 @@ li>a:only-child:after {
 
 @media screen and (max-width: 1080px) {
     .banner-text-div {
-        margin: 70px 50px 50px 50px;
+        margin: 70px 50px 50px 50px !important;
     }
 }
 
