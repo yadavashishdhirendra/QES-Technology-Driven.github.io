@@ -1,13 +1,18 @@
 @font-face {
-    font-family: CircularXX-Black;
+    font-family: Ubuntu_Regular;
     src: url('../Fonts/Ubuntu/Ubuntu-Regular.ttf');
+}
+
+@font-face {
+    font-family: Ubuntu_Bold;
+    src: url('../Fonts/Ubuntu/Ubuntu-Bold.ttf');
 }
 
 :root {
     --Head-Font: calc(32pt + 0.15vw);
     --Subhead-Font: calc(22pt + 0.15vw);
-    --Para-Font: calc(18pt + 0.15vw);
-    --Subpara-Font: calc(11pt + 0.15vw);
+    --Para-Font: calc(12pt + 0.15vw);
+    --Subpara-Font: calc(10pt + 0.15vw);
     --letter-spacing: 0.04em;
     --line-height: 1.6195;
 }
@@ -17,260 +22,268 @@
     padding: 0;
     user-select: none;
     box-sizing: border-box;
-    font-family: CircularXX-Black;
+    font-family: Ubuntu_Regular;
 }
 
 /* Navbar Starts Here */
 
-nav {
-    background: #ffff;
+#container {
+    margin: 0 auto;
+    max-width: 890px;
 }
 
-.Wrapper {
+.toggle, [id^=drop] {
+    display: none;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+nav a:hover {
+    color: #de3d3b;
+}
+
+.wrapper {
     position: relative;
     max-width: 1600px;
-    padding: 0px 0px 0px 70px;
+    top: 0;
+    padding: 0px 25px;
 }
 
-nav ul li a:hover {
-    color: #de3d3b;
-    transition: .3s ease-in-out;
+#logo {
+    display: block;
+    padding: 8px 0px 2px 40px;
+    float: left;
+    line-height: 60px;
 }
 
 nav:after {
-    content: '';
-    clear: both;
+    content: "";
     display: table;
-}
-
-nav .logo {
-    float: left;
-    color: white;
-    width: 100px;
-    line-height: 70px;
-    padding: 10px 0px 10px 0px;
+    clear: both;
 }
 
 nav ul {
     float: right;
-    margin-right: 0px;
+    padding: 0;
+    margin: 0;
     list-style: none;
     position: relative;
-    padding: 20px 0px 20px 0px;
 }
 
 nav ul li {
-    float: left;
+    margin: 0px;
     display: inline-block;
-    color: black;
-    margin: 0 5px;
+    float: left;
 }
 
-nav ul li a {
+nav a {
+    display: block;
+    padding: 0 20px;
     color: black;
-    line-height: 70px;
-    text-decoration: none;
     font-size: var(--Subpara-Font);
-    letter-spacing: var(--letter-spacing);
-    padding: 8px 8px;
+    line-height: 60px;
+    transform: translate(25px, 15px);
+    text-decoration: none;
+    font-family: Ubuntu_Regular;
+    letter-spacing: 0.03em;
 }
 
 nav ul ul {
+    display: none;
     position: absolute;
-    top: 90px;
-    background-color: #ffff;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    opacity: 0;
-    visibility: hidden;
-    transition: top .1s;
-}
-
-nav ul ul ul {
-    border-top: none;
-}
-
-.fa-arrow-alt-circle-down:before {
-    color: #de3d3b;
+    top: 60px;
+    background-color: white;
+    transform: top .1s;
+    box-shadow: rgb(99 99 99 / 10%) 0px 10px 40px 0px;
 }
 
 nav ul li:hover>ul {
-    top: 90px;
-    opacity: 1;
-    visibility: visible;
+    display: inherit;
 }
 
 nav ul ul li {
-    position: relative;
-    margin: 0px;
-    width: 150px;
+    width: 170px;
     float: none;
     display: list-item;
-}
-
-nav ul ul li a {
-    line-height: 50px;
+    position: relative;
 }
 
 nav ul ul ul li {
     position: relative;
-    top: -60px;
-    left: 150px;
-    box-shadow: rgb(99 99 99 / 10%) 0px 10px 40px 0px;
+    top: 0px;
+    left: 0px;
 }
 
-.show, .icon, input {
-    display: none;
+li>a:only-child:after {
+    content: '';
 }
 
-.fa-plus {
-    font-size: 15px;
-    margin-left: 40px;
-}
+/* Media Queries
+--------------------------------------------- */
 
-#Menus {
-    padding: 13px 15px;
-    border-radius: 50%;
-    background: #7a9fcb;
-    color: white;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 100;
-}
-
-/* underline */
-
-ul li a {
-    position: relative;
-    text-decoration: none;
-    transition: 0.5s;
-}
-
-ul li a::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 3px;
-    top: 100%;
-    left: 0;
-    background: #de3d3b;
-    transition: transform 0.5s;
-    transform: scaleX(0);
-    transform-origin: right;
-}
-
-ul li a:hover {
-    color: #95a5a6;
-}
-
-ul li a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-/* nav ends Here */
-
-/* nav Responsive starts here */
-
-@media all and (max-width: 968px) {
-    nav ul {
-        margin-right: 0px;
-        float: left;
-    }
-    .cancel i {
-        color: white !important;
-    }
-    nav ul li a {
-        line-height: 80px !important;
-    }
-    nav .logo {
-        padding-left: 30px;
+@media all and (max-width: 768px) {
+    #logo {
+        display: block;
+        padding: 0;
         width: 100%;
-    }
-    .show+a, ul {
-        display: none;
-    }
-    nav ul li, nav ul ul li {
-        display: block;
-        width: 100%;
-    }
-    nav ul li a:hover{
-        color: #de3d3b;
-    }
-    nav ul li a:hover {
-        box-shadow: none;
-    }
-    .show {
-        display: block;
-        color: white;
-        font-size: var(--Subpara-Font);
-        padding: 0 15px;
-        line-height: 70px;
-        cursor: pointer;
-    }
-    nav ul li a {
-        color: white;
-    }
-    .Wrapper {
-        padding: 0px 0px 0px;
-    }
-    .show:hover {
-        color: #de3d3b;
-    }
-    .icon {
-        display: block;
-        color: #de3d3b;
-        position: absolute;
-        top: 0;
-        right: 40px;
-        line-height: 95px;
-        cursor: pointer;
-        font-size: 40px;
-    }
-    nav ul ul {
-        top: 70px;
-        border-top: 0px;
+        text-align: center;
         float: none;
-        position: static;
-        display: none;
-        opacity: 1;
-        visibility: visible;
     }
-    nav ul ul a {
-        padding-left: 40px;
+    nav {
+        margin: 0;
+    }
+    .toggle+a, .menu {
+        display: none;
+    }
+    .toggle {
+        display: block;
+        background-color: #de3d3b;
+        padding: 0 20px;
+        color: #FFF;
+        font-size: var(--Subpara-Font);
+        line-height: 60px;
+        text-decoration: none;
+        border: none;
+    }
+    [id^=drop]:checked+ul {
+        display: block;
+    }
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+    nav ul ul .toggle, nav ul ul a {
+        padding: 0 40px;
     }
     nav ul ul ul a {
-        padding-left: 80px;
+        padding: 0 80px;
+    }
+    nav a:hover, nav ul ul ul a {
+        background-color: #de3d3b;
+        color: white;
+    }
+    nav ul li ul li .toggle, nav ul ul a {
+        background-color: #de3d3b;
+        color: white;
+    }
+    nav a {
+        transform: translate(0px, 0px) !important;
+    }
+    nav ul ul {
+        float: none;
+        position: static;
+        color: #ffffff;
+    }
+    nav ul ul li:hover>ul, nav ul li:hover>ul {
+        display: none;
+    }
+    nav ul ul li {
+        display: block;
+        width: 100%;
     }
     nav ul ul ul li {
         position: static;
     }
-    [id^=btn]:checked+ul {
+}
+
+@media all and (max-width: 330px) {
+    nav ul li {
         display: block;
-        background-color: #7a9fcb;
-    }
-    nav ul ul li {
-        border-bottom: 0px;
-    }
-    span.cancel:before {
-        content: '';
+        width: 94%;
     }
 }
 
 @media screen and (max-width: 1080px) {
-    .Wrapper {
-        padding: 0px 0px 0px 0px;
+    nav a {
+        transform: translate(25px, 0px);
     }
-    nav .logo img {
-        padding: 0px 0px 0px 10px;
+    #Block {
+        display: none;
     }
-    nav ul li a {
-        padding: 8px 10px;
+    #logo img {
+        padding: 10px 0px 10px 0px;
     }
-    nav ul {
-        padding: 0px 0px 0px 0px !important;
+    #logo {
+        width: 300px !important;
+        margin: auto;
     }
-    nav ul ul ul li{
-        box-shadow: none !important;
+    .Heading br {
+        content: '';
     }
 }
 
 /* nav responsive ends here */
+
+/* Hero Banner Starts Here */
+
+.Hero_Banner_Section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 580px;
+    grid-column-gap: 0px;
+    align-content: center;
+    justify-content: center;
+    max-width: 1600px;
+    padding: 0px 0px 0px 0px;
+}
+
+.banner-image-div {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.banner-overlay-div {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.banner-text-div {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.banner-image {
+    display: grid;
+    min-width: 350px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-overlay-div {
+    display: grid;
+    max-width: 100%;
+    background-image: -webkit-linear-gradient(to right, #000000ed, #00000000);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background-image: linear-gradient(to right, #000000ed, #00000000);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.banner-text-div {
+    display: grid;
+    align-items: center;
+    max-width: fit-content;
+    background-color: #fff;
+    margin: 100px 50px 100px 50px;
+    padding: 30px 50px 30px 50px;
+    z-index: 2;
+    opacity: .95;
+}
+
+.Heading {
+    font-size: var(--Head-Font);
+    letter-spacing: 0.03em;
+    line-height: 1.2165;
+    font-family: Ubuntu_Bold;
+    color: #000;
+}
+
+.Para {
+    font-size: var(--Para-Font);
+    letter-spacing: 0.03em;
+    line-height: 1.6195;
+    padding: 20px 0px 20px 0px;
+}
+
+/* Hero Banner Ends Here */
