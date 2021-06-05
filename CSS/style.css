@@ -192,6 +192,9 @@ ul li a:hover::after {
         display: block;
         width: 100%;
     }
+    nav ul li a:hover{
+        color: #de3d3b;
+    }
     nav ul li a:hover {
         box-shadow: none;
     }
@@ -210,11 +213,11 @@ ul li a:hover::after {
         padding: 0px 0px 0px;
     }
     .show:hover {
-        color: #000;
+        color: #de3d3b;
     }
     .icon {
         display: block;
-        color: #000;
+        color: #de3d3b;
         position: absolute;
         top: 0;
         right: 40px;
@@ -264,6 +267,9 @@ ul li a:hover::after {
     }
     nav ul {
         padding: 0px 0px 0px 0px !important;
+    }
+    nav ul ul ul li{
+        box-shadow: none !important;
     }
 }
 
