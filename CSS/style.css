@@ -1,0 +1,270 @@
+@font-face {
+    font-family: CircularXX-Black;
+    src: url('../Fonts/Ubuntu/Ubuntu-Regular.ttf');
+}
+
+:root {
+    --Head-Font: calc(32pt + 0.15vw);
+    --Subhead-Font: calc(22pt + 0.15vw);
+    --Para-Font: calc(18pt + 0.15vw);
+    --Subpara-Font: calc(11pt + 0.15vw);
+    --letter-spacing: 0.04em;
+    --line-height: 1.6195;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: CircularXX-Black;
+}
+
+/* Navbar Starts Here */
+
+nav {
+    background: #ffff;
+}
+
+.Wrapper {
+    position: relative;
+    max-width: 1600px;
+    padding: 0px 0px 0px 70px;
+}
+
+nav ul li a:hover {
+    color: #de3d3b;
+    transition: .3s ease-in-out;
+}
+
+nav:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav .logo {
+    float: left;
+    color: white;
+    width: 100px;
+    line-height: 70px;
+    padding: 10px 0px 10px 0px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 0px;
+    list-style: none;
+    position: relative;
+    padding: 20px 0px 20px 0px;
+}
+
+nav ul li {
+    float: left;
+    display: inline-block;
+    color: black;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: black;
+    line-height: 70px;
+    text-decoration: none;
+    font-size: var(--Subpara-Font);
+    letter-spacing: var(--letter-spacing);
+    padding: 8px 8px;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 90px;
+    background-color: #ffff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .1s;
+}
+
+nav ul ul ul {
+    border-top: none;
+}
+
+.fa-arrow-alt-circle-down:before {
+    color: #de3d3b;
+}
+
+nav ul li:hover>ul {
+    top: 90px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+}
+
+nav ul ul li a {
+    line-height: 50px;
+}
+
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    left: 150px;
+    box-shadow: rgb(99 99 99 / 10%) 0px 10px 40px 0px;
+}
+
+.show, .icon, input {
+    display: none;
+}
+
+.fa-plus {
+    font-size: 15px;
+    margin-left: 40px;
+}
+
+#Menus {
+    padding: 13px 15px;
+    border-radius: 50%;
+    background: #7a9fcb;
+    color: white;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+}
+
+/* underline */
+
+ul li a {
+    position: relative;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+ul li a::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    top: 100%;
+    left: 0;
+    background: #de3d3b;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+ul li a:hover {
+    color: #95a5a6;
+}
+
+ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* nav ends Here */
+
+/* nav Responsive starts here */
+
+@media all and (max-width: 968px) {
+    nav ul {
+        margin-right: 0px;
+        float: left;
+    }
+    .cancel i {
+        color: white !important;
+    }
+    nav ul li a {
+        line-height: 80px !important;
+    }
+    nav .logo {
+        padding-left: 30px;
+        width: 100%;
+    }
+    .show+a, ul {
+        display: none;
+    }
+    nav ul li, nav ul ul li {
+        display: block;
+        width: 100%;
+    }
+    nav ul li a:hover {
+        box-shadow: none;
+    }
+    .show {
+        display: block;
+        color: white;
+        font-size: 18px;
+        padding: 0 15px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+    nav ul li a {
+        color: white;
+    }
+    .Wrapper {
+        padding: 0px 0px 0px;
+    }
+    .show:hover {
+        color: #000;
+    }
+    .icon {
+        display: block;
+        color: #000;
+        position: absolute;
+        top: 0;
+        right: 40px;
+        line-height: 95px;
+        cursor: pointer;
+        font-size: 40px;
+    }
+    nav ul ul {
+        top: 70px;
+        border-top: 0px;
+        float: none;
+        position: static;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    nav ul ul a {
+        padding-left: 40px;
+    }
+    nav ul ul ul a {
+        padding-left: 80px;
+    }
+    nav ul ul ul li {
+        position: static;
+    }
+    [id^=btn]:checked+ul {
+        display: block;
+        background-color: #7a9fcb;
+    }
+    nav ul ul li {
+        border-bottom: 0px;
+    }
+    span.cancel:before {
+        content: '';
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .Wrapper {
+        padding: 0px 0px 0px 0px;
+    }
+    nav .logo img {
+        padding: 0px 0px 0px 10px;
+    }
+    nav ul li a {
+        padding: 8px 10px;
+    }
+    nav ul {
+        padding: 0px 0px 0px 0px !important;
+    }
+}
+
+/* nav responsive ends here */
