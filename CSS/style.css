@@ -198,7 +198,7 @@ ul li a:hover::after {
     .show {
         display: block;
         color: white;
-        font-size: 18px;
+        font-size: var(--Subpara-Font);
         padding: 0 15px;
         line-height: 70px;
         cursor: pointer;
