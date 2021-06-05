@@ -214,6 +214,9 @@ li>a:only-child:after {
     .Heading br {
         content: '';
     }
+    .Para br {
+        content: '';
+    }
 }
 
 /* nav responsive ends here */
@@ -223,7 +226,7 @@ li>a:only-child:after {
 .Hero_Banner_Section {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 650px;
+    grid-template-rows: 580px;
     grid-column-gap: 0px;
     align-content: center;
     justify-content: center;
@@ -304,6 +307,12 @@ li>a:only-child:after {
     left: 145px;
     font-size: var(--Subpara-Font);
     color: #000;
+}
+
+@media screen and (max-width: 1080px) {
+    .banner-text-div {
+        margin: 70px 50px 50px 50px;
+    }
 }
 
 /* Hero Banner Ends Here */

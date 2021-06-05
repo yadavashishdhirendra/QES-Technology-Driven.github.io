@@ -22,8 +22,7 @@
         padding: 10px 25px 10px 25px;
         margin: 40px 20px 40px 20px;
     }
-
-    .banner-text-div #btns{
+    .banner-text-div #btns {
         left: 110px;
     }
 }
@@ -70,7 +69,7 @@
     }
 }
 
-/* iPads (portrait and landscape) ---------- */
+/* iPads (portrait and landscape) ----------- */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     nav a {
