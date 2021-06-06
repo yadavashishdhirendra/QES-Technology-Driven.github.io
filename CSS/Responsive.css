@@ -8,28 +8,176 @@
 }
 
 @media only screen and (max-width: 40em) {
+    #transform__QES{
+        transform: translate(70px, 25px) !important;
+    }
     #logo img {
-        width: 300px;
+        width: 265px;
         padding: 10px 0px 10px 0px;
     }
     .Heading {
         font-size: var(--Head-Font-re);
     }
+    .line__full{
+        margin-top: 10rem;
+    }
     .break {
         display: none;
     }
     .banner-text-div {
-        padding: 10px 25px 10px 25px !important;
-        margin: 40px 20px 40px 20px !important;
+        padding: 20px 25px 46px 25px;
+        margin: 30px 10px 30px 10px;
     }
     .banner-text-div #btns {
         left: 85px;
+    }
+    .gallery {
+        margin: 70px auto;
+    }
+    .gallery .tile {
+        width: 100%;
+    }
+    .Wrapper__Side1 {
+        padding: 0px 0px 0px 0px;
+    }
+    .One__Column {
+        padding: 0px 20px 0px 20px;
+    }
+    .QES_AsideRow {
+        flex-direction: column;
+    }
+    .Wrapper__Side1 {
+        padding: 50px 0px 50px 0px;
+    }
+    .Footer__showcase h2 {
+        margin-top: 30px;
+    }
+    .Footer__showcase {
+        width: 100%;
+        height: 580px;
+        position: relative;
+        color: white;
+        max-width: 1600px;
+    }
+    .Footer__showcase .overlay {
+        width: 100%;
+        height: 580px;
+        background-color: rgba(0, 35, 82, 0.7);
+        position: absolute;
+        top: 150px;
+        left: 0;
+        z-index: 999
+    }
+    .underline1::after{
+        width: 33% !important;
+    }
+    .underline2::after{
+        width: 56% !important;
+    }
+    .underline3::after{
+        width: 25% !important;
+    }
+    .underline4::after{
+        width: 22% !important;
+    }
+    .underline5::after{
+        width: 32% !important;
+    }
+    .underline6::after{
+        width: 41% !important;
+    }
+    .underline7::after{
+        width: 32% !important;
+    }
+    .underline8::after{
+        width: 51% !important;
+    }
+    .underline9::after{
+        width: 66% !important;
+    }
+    .QES_AsideRow{
+        padding: 0px 10px 0px 10px;
+    }
+    .Footer__showcase h2{
+        font-size: var(--Subhead-Font-re);
+        padding: 0px 10px 0px 10px;
+    }
+    .Footer__showcase #uniags{
+        font-size: var(--Para-Font-re);
+        padding: 0px 10px 0px 10px;
+    }
+}
+
+
+@media screen and (max-width: 1080px) {
+    .underline1::after {
+        width: 27%;
+    }
+    .underline2::after{
+        width: 47%;
+    }
+    .underline3::after{
+        width: 21%;
+    }
+    .underline4::after{
+        width: 19%;
+    }
+    .underline5::after{
+        width: 28%;
+    }
+    .underline6::after{
+        width: 36%;
+    }
+    .underline7::after{
+        width: 28%;
+    }
+    .underline8::after{
+        width: 43%;
+    }
+    .underline9::after{
+        width: 57%;
+    }
+}
+
+@media only screen and (max-width: 40em) and (orientation:landscape) {
+    .Footer__showcase {
+        width: 100%;
+        height: 560px;
+        position: relative;
+        color: white;
+        max-width: 1600px;
+    }
+    .Footer__showcase .overlay {
+        width: 100%;
+        height: 560px;
+        background-color: rgba(0, 35, 82, 0.7);
+        position: absolute;
+        top: 150px;
+        left: 0;
+        z-index: 999
     }
 }
 
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 
-@media only screen and (min-width: 40.063em) {}
+@media only screen and (min-width: 40.063em) {
+    .Footer__showcase {
+        width: 100%;
+        height: 700px;
+        position: relative;
+        color: white;
+        max-width: 1600px;
+    }
+    .Footer__showcase .overlay {
+        width: 100%;
+        height: 700px;
+        background-color: rgba(0, 35, 82, 0.7);
+        position: absolute;
+        top: 150px;
+        left: 0;
+        z-index: 999
+    }
+}
 
 /* min-width 641px, medium screens */
 
@@ -50,6 +198,9 @@
 @media screen and (max-width: 1280px) and (max-height: 800px) and (min-height: 769px) {
     #logo {
         width: 100px;
+    }
+    #Remoe_Itt {
+        padding: 50px 60px 50px 60px;
     }
 }
 
